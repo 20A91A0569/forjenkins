@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <title> exp3d   </title>
+    </head>
+    <body>
+        <center><font color="white"><h1 style="background-color:lightblue">WELCOME TO ONLINE TICKET BOOKING</h1></font>
+        <h2>Click <span style="color:blue">BOOK</span> to book Tickets</h2>
+        <br>
+        <input type="button" value="BOOK" onclick="fun()">
+       <center><h2 id="id"> </h2>
+        <h2 id="id1"> </h2></center>
+        <script>
+            function fun(){
+            var a=prompt("enter no  of ticket's to book");
+            const p=150;
+            s=0;
+            j=0;
+            k=0.03
+            if(a>2 && a<6)
+            {
+                for(i=1;i<=a;i++)
+                {
+                  j=p-(p*k);
+                  s+=j;
+                  j=0;
+                  k+=0.02; 
+                }
+            }
+            else if(a<=2)
+            {
+                s=p*a;
+            }
+            else
+            s=0;
+        if(s!=0)
+        {
+document.getElementById("id").innerHTML="The Amount Needed To Book Tickets::"+s;
+        }
+        else
+        {
+            document.getElementById("id").innerHTML="Only upto 5 tickets you can book Online";
+        }
+           
+        }
+        </script>
+     </center>
+    </body>
+</html>
